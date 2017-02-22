@@ -40,7 +40,7 @@ $ npm install o2-upload-to-fbs --save
 #### Install Angular-CLI
 
 ```bash
-$ npm install -g angular-cli
+$ npm install -g @angular/cli
 ```
 
 #### Create New Project
