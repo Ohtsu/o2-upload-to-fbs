@@ -4,6 +4,8 @@
 
 _o2-upload-to-fbs_ is a tool library for uploading files to Firebase Storage by AngularFire2.
 
+_Video Explanation_
+<https://youtu.be/4op1F6yetJM>
 
 ## Overview 
    - _o2-upload-to-fbs_ is a tool for those who want to upload files to Firebase Storage by using AngularFire2
