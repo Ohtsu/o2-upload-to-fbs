@@ -1,4 +1,4 @@
-﻿# _o2-upload-to-fbs_ Angular2 Library to upload files to Firebase Storage
+# _o2-upload-to-fbs_ Angular2 Library to upload files to Firebase Storage
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 
