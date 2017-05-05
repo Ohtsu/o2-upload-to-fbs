@@ -1,6 +1,6 @@
 {
   "name": "o2-upload-to-fbs",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "scripts": {
     "build": "ngc -p tsconfig.json",
     "lint": "tslint src/**/*.ts",
