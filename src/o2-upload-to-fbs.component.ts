@@ -5,7 +5,7 @@ import { FirebaseApp } from 'angularfire2';
   selector: 'o2-upload-to-fbs',
   template: `
   <input type="file" id="btnUpload" style="display:none;"  (change)="onBtnUploadChange($event)" />
-  <input [(ngModel)]="fileUploadId" placeholder="upload file" size="30">
+  <input [(ngModel)]="fileUploadId" placeholder={{txbFilePlaceHolder}} size={{txbFileDisplaySize}}>
   <button type="button" (click) = "onBtnBrowseClick($event)">{{btnSelectText}}</button>
   <button type="button" (click) = "onBtnExecuteClick($event)">{{btnExecuteText}}</button>
   `
@@ -16,12 +16,15 @@ export class O2UploadToFbsComponent implements OnInit {
     @Input() fbsBasePath: string;
     @Input() btnSelectText: string;
     @Input() btnExecuteText: string;
+    @Input() txbFilePlaceHolder: string;
+    @Input() txbFileDisplaySize: string;
      fileUploadId: any;
      fileUploadFile: any;
      targetRef: any;
      storageRef: any;
      constructor(@Inject(FirebaseApp) firebaseApp:any){
         this.storageRef = firebaseApp.storage().ref();
+
      }
 
      ngOnInit() {
@@ -70,6 +73,7 @@ export class O2UploadToFbsComponent implements OnInit {
               let downloadUrl = task.snapshot.downloadURL;
               console.log(downloadUrl);
               res(downloadUrl);
+              console.log("Uploaded!");
             }
           );
        })
