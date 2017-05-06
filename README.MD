@@ -243,7 +243,7 @@ Then you can find the file which you uploaded from your local computer.
 
 ## Version
 
-   - o2-upload-to-fbs : 0.1
+   - o2-upload-to-fbs : 2.1
    - Angular2     : 2.0.0
    - TypeScript   : 2.0.2
    - Angularfire2 : 2.0-beta,
