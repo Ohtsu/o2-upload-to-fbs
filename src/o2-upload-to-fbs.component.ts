@@ -17,7 +17,7 @@ export class O2UploadToFbsComponent implements OnInit {
     @Input() btnSelectText: string;
     @Input() btnExecuteText: string;
     @Input() txbFilePlaceHolder: string;
-    @Input() txbFileDisplaySize: string;
+    // @Input() txbFileDisplaySize: string;
      fileUploadId: any;
      fileUploadFile: any;
      targetRef: any;
