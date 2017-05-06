@@ -28,6 +28,9 @@ export class O2UploadToFbsComponent implements OnInit {
          if (this.btnSelectText == ''){
            this.btnSelectText = "Select File";
          }
+         if (this.btnExecuteText == ''){
+           this.btnSelectText = "Upload";
+         }
      }
 
      
