@@ -5,7 +5,7 @@ import { FirebaseApp } from 'angularfire2';
   selector: 'o2-upload-to-fbs',
   template: `
   <input type="file" id="btnUpload" style="display:none;"  (change)="onBtnUploadChange($event)" />
-  <input [(ngModel)]="fileUploadId" placeholder={{txbFilePlaceHolder}} size={{txbFileDisplaySize}}>
+  <input [(ngModel)]="fileUploadId" placeholder={{txbFilePlaceHolder}} >
   <button type="button" (click) = "onBtnBrowseClick($event)">{{btnSelectText}}</button>
   <button type="button" (click) = "onBtnExecuteClick($event)">{{btnExecuteText}}</button>
   `
