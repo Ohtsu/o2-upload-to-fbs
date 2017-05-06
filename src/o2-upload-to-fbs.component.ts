@@ -5,6 +5,8 @@ import { FirebaseApp } from 'angularfire2';
   selector: 'o2-upload-to-fbs',
   template: `
   <input type="file" id="btnUpload" style="display:none;"  (change)="onBtnUploadChange($event)" />
+  <input [(ngModel)]="fileUploadId" placeholder="upload file" size="30">
+  <button type="button" (click) = "onBtnExecuteClick($event)">{{btnExecuteText}}</button>
   <button type="button" (click) = "onBtnBrowseClick($event)">{{btnSelectText}}</button>
   `
 //   ,
@@ -13,8 +15,11 @@ import { FirebaseApp } from 'angularfire2';
 export class O2UploadToFbsComponent implements OnInit {
     @Input() fbsBasePath: string;
     @Input() btnSelectText: string;
-     targetRef:any;
-     storageRef:any;
+    @Input() btnExecuteText: string;
+     fileUploadId: any;
+     fileUploadFile: any;
+     targetRef: any;
+     storageRef: any;
      constructor(@Inject(FirebaseApp) firebaseApp:any){
         this.storageRef = firebaseApp.storage().ref();
      }
@@ -35,7 +40,15 @@ export class O2UploadToFbsComponent implements OnInit {
          let targetFile = event.srcElement.files[0];
          let uploader = document.getElementById("btnUpload");
          let fbsPath = this.fbsBasePath + targetFile.name;
-         this.uploadFile(fbsPath,targetFile);
+         this.fileUploadId = targetFile.name;
+         this.fileUploadFile = targetFile;
+
+        //  this.uploadFile(fbsPath,targetFile);
+     }
+
+     onBtnExecuteClick(event:any){
+        let fbsPath = this.fbsBasePath + this.fileUploadId;
+        this.uploadFile(fbsPath,this.fileUploadFile);
      }
 
      uploadFile(fbsPath:string,targetFile:string) {
