@@ -72,16 +72,16 @@ export class O2UploadToFbsComponent implements OnInit {
             },
             (error:any) => {
               console.log(error.code);
+              window.alert("Error "+error.code);
               rej(error);
             },
             () => {
               let downloadUrl = task.snapshot.downloadURL;
               console.log(downloadUrl);
               if(this.flgShowMessage){
-                window.confirm("Uploaded!");
+                window.alert("Uploaded! "+targetFile);
               }
               res(downloadUrl);
-              console.log("Uploaded!");
             }
           );
        })
