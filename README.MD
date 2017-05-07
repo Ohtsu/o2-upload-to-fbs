@@ -174,12 +174,12 @@ In the same directory, modify **app.component.html** as follows.
 
 ```
 
-You can set two parameters (**fbsBasePath** and **btnSelectText**)
+You can set five parameters as follows.
 
    - **fbsBasePath**   : Target path in your Firebase Storage 
                     (eg. 'images/' --> 'xxxxxxxx.appspot.com/images/')
    - **inpPlaceholderText** : Placeholder text for textbox
-   - **flgShowMessage** : true: Show messagebox when uploaded or error
+   - **flgShowMessage** : 'true': Show messagebox when uploaded or error 'false': Don't show messagebox 
    - **btnSelectText** : Title text of the select button
    - **btnExecuteText** : Title text of the execute button for uploading
 
