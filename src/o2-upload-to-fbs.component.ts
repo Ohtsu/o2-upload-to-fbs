@@ -17,8 +17,6 @@ export class O2UploadToFbsComponent implements OnInit {
     @Input() btnSelectText: string;
     @Input() btnExecuteText: string;
     @Input() flgShowMessage: boolean;
-    // @Input() txbFilePlaceHolder: string;
-    // @Input() txbFileDisplaySize: string;
      fileUploadFileName: any;
      fileUploadFile: any;
      targetRef: any;
@@ -37,10 +35,6 @@ export class O2UploadToFbsComponent implements OnInit {
          }
      }
 
-    //  ngOnChanges(){
-
-
-    //  }
 
      onBtnBrowseClick(event:any){
          let uploadButton = document.getElementById("btnUpload");
@@ -53,8 +47,6 @@ export class O2UploadToFbsComponent implements OnInit {
          let fbsPath = this.fbsBasePath + targetFile.name;
          this.fileUploadFileName = targetFile.name;
          this.fileUploadFile = targetFile;
-
-        //  this.uploadFile(fbsPath,targetFile);
      }
 
      onBtnExecuteClick(event:any){
@@ -79,7 +71,8 @@ export class O2UploadToFbsComponent implements OnInit {
               let downloadUrl = task.snapshot.downloadURL;
               console.log(downloadUrl);
               if(this.flgShowMessage){
-                window.alert("Uploaded! "+fbsPath);
+                let msg = "Uploaded! "+fbsPath;
+                window.alert(msg);
               }
               res(downloadUrl);
             }
