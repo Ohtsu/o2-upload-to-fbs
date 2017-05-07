@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "o2-upload-to-fbs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scripts": {
     "build": "ngc -p tsconfig.json",
     "lint": "tslint src/**/*.ts",
