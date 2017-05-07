@@ -242,7 +242,7 @@ Then you can find the file which you uploaded from your local computer.
 
 ## Version
 
-   - o2-upload-to-fbs : 1.0
+   - o2-upload-to-fbs : 1.2
    - Angular2     : 2.0.0
    - TypeScript   : 2.0.2
    - Angularfire2 : 2.0-beta,
@@ -268,6 +268,8 @@ Then you can find the file which you uploaded from your local computer.
 
 ## Change Log
 
+ - 2017.5.7  version 1.2 uploaded
+  
  - 2017.2.19 version 0.1 uploaded 
 
 ## Copyright
