@@ -163,7 +163,11 @@ In the same directory, modify **app.component.html** as follows.
 
 <!-- Add Start -->
 
-<o2-upload-to-fbs [fbsBasePath] = "'images/'"  [inpPlaceholderText]= "'Upload File'"  [flgShowMessage] = "true" [btnSelectText] = "'Select'" [btnExecuteText] = "'Upload'"></o2-upload-to-fbs>
+<o2-upload-to-fbs [fbsBasePath] = "'images/'"  [inpPlaceholderText]= "'Upload File'"  
+
+[flgShowMessage] = "true" [btnSelectText] = "'Select'" [btnExecuteText] = "'Upload'">
+
+</o2-upload-to-fbs>
 
 <!-- Add End -->
 
