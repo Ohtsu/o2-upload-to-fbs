@@ -19,7 +19,7 @@ export class O2UploadToFbsComponent implements OnInit {
     @Input() flgShowMessage: boolean;
     // @Input() txbFilePlaceHolder: string;
     // @Input() txbFileDisplaySize: string;
-     fileUploadId: any;
+     fileUploadFileName: any;
      fileUploadFile: any;
      targetRef: any;
      storageRef: any;
@@ -51,18 +51,18 @@ export class O2UploadToFbsComponent implements OnInit {
          let targetFile = event.srcElement.files[0];
          let uploader = document.getElementById("btnUpload");
          let fbsPath = this.fbsBasePath + targetFile.name;
-         this.fileUploadId = targetFile.name;
+         this.fileUploadFileName = targetFile.name;
          this.fileUploadFile = targetFile;
 
         //  this.uploadFile(fbsPath,targetFile);
      }
 
      onBtnExecuteClick(event:any){
-        let fbsPath = this.fbsBasePath + this.fileUploadId;
+        let fbsPath = this.fbsBasePath + this.fileUploadFileName;
         this.uploadFile(fbsPath,this.fileUploadFile);
      }
 
-     uploadFile(fbsPath:string,targetFile:string) {
+     uploadFile(fbsPath:string,targetFile:any) {
        let promise = new Promise((res,rej) => {
           this.targetRef=this.storageRef.child(fbsPath);
           let task=this.targetRef.put(targetFile);
@@ -79,7 +79,7 @@ export class O2UploadToFbsComponent implements OnInit {
               let downloadUrl = task.snapshot.downloadURL;
               console.log(downloadUrl);
               if(this.flgShowMessage){
-                window.alert("Uploaded! "+targetFile);
+                window.alert("Uploaded! "+fbsPath);
               }
               res(downloadUrl);
             }
