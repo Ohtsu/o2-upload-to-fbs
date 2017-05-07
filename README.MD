@@ -183,6 +183,7 @@ You can set five parameters as follows.
    - **btnSelectText** : Title text of the select button
    - **btnExecuteText** : Title text of the execute button for uploading
 
+  <img src="https://raw.githubusercontent.com/Ohtsu/images/master/firebase/o2upload02.png" width= "640" >
 
 
 #### Check your Firebase Storage Rule
@@ -209,7 +210,6 @@ service firebase.storage {
 }
 
 ```
-
   <img src="https://raw.githubusercontent.com/Ohtsu/images/master/firebase/FirebaseStorageRule11.png" width= "640" >
 
 
