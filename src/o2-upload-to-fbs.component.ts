@@ -16,6 +16,7 @@ export class O2UploadToFbsComponent implements OnInit {
     @Input() fbsBasePath: string;
     @Input() btnSelectText: string;
     @Input() btnExecuteText: string;
+    @Input() flgShowMessage: boolean;
     // @Input() txbFilePlaceHolder: string;
     // @Input() txbFileDisplaySize: string;
      fileUploadId: any;
@@ -24,7 +25,7 @@ export class O2UploadToFbsComponent implements OnInit {
      storageRef: any;
      constructor(@Inject(FirebaseApp) firebaseApp:any){
         this.storageRef = firebaseApp.storage().ref();
-
+        this.flgShowMessage = true;
      }
 
      ngOnInit() {
@@ -36,7 +37,11 @@ export class O2UploadToFbsComponent implements OnInit {
          }
      }
 
-     
+    //  ngOnChanges(){
+
+
+    //  }
+
      onBtnBrowseClick(event:any){
          let uploadButton = document.getElementById("btnUpload");
          uploadButton.click();
@@ -72,6 +77,9 @@ export class O2UploadToFbsComponent implements OnInit {
             () => {
               let downloadUrl = task.snapshot.downloadURL;
               console.log(downloadUrl);
+              if(this.flgShowMessage){
+                window.confirm("Uploaded!");
+              }
               res(downloadUrl);
               console.log("Uploaded!");
             }
