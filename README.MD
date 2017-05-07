@@ -160,9 +160,10 @@ In the same directory, modify **app.component.html** as follows.
 <h1>
   {{title}}
 </h1>
+
 <!-- Add Start -->
 
-<o2-upload-to-fbs [fbsBasePath] = "'images/'" [btnSelectText] = "'Browse'"></o2-upload-to-fbs>
+<o2-upload-to-fbs [fbsBasePath] = "'images/'"  [inpPlaceholderText]= "'Upload File'"  [flgShowMessage] = "true" [btnSelectText] = "'Select'" [btnExecuteText] = "'Upload'"></o2-upload-to-fbs>
 
 <!-- Add End -->
 
@@ -173,7 +174,10 @@ You can set two parameters (**fbsBasePath** and **btnSelectText**)
 
    - **fbsBasePath**   : Target path in your Firebase Storage 
                     (eg. 'images/' --> 'xxxxxxxx.appspot.com/images/')
+   - **inpPlaceholderText** : Placeholder text for textbox
+   - **flgShowMessage** : true: Show messagebox when uploaded or error
    - **btnSelectText** : Title text of the select button
+   - **btnExecuteText** : Title text of the execute button for uploading
 
 
 
@@ -269,7 +273,7 @@ Then you can find the file which you uploaded from your local computer.
 ## Change Log
 
  - 2017.5.7  version 1.2 uploaded
-  
+
  - 2017.2.19 version 0.1 uploaded 
 
 ## Copyright
