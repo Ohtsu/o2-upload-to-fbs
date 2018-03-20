@@ -272,6 +272,11 @@ Then you can find the file which you uploaded from your local computer.
 - "feat(storage): upload, read, and process* files #213",2016/6/8,
 <https://github.com/angular/angularfire2/issues/213>
 
+- "Angular5 Custom Library: The definitive, step-by-step guide", 
+<https://www.udemy.com/draft/1461368/learn/v4/content>
+
+
+
 
 
 ## Change Log
